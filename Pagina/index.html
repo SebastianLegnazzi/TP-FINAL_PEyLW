@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="traje, vestido, pantalo, remera, buzo, campera, diseño, modistas">
+    <meta name="description" content="Pagina donde podras realizar tu prenda deseada">
+    <meta name="author" content="Sebastian Legnazzi">
+    <link rel="stylesheet" href="css/Index.css">
+    <link rel="icon" href="img/LogoPrincipalMin.jpg">
+    <script>
+        function tieneCuenta(pagina){
+            inicioSesion = localStorage.getItem("inicioSesion");
+            if(inicioSesion == null || inicioSesion == "no"){
+                alert("Tienes que iniciar sesion para acceder a esta seccion!")
+            }else{
+                window.location.assign(pagina);
+            }
+        }
+    </script>
+    <title>De todo un poco</title>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul id="menu_items">
+                <li><a href="paginas/diseño.html">Diseño</a></li>
+                <li><a href="paginas/Modistas.html">Modistas</a></li>
+                <li><a onclick="tieneCuenta('paginas/Pedidos.html')" href="#">Pedidos</a></li>
+                <li><a onclick="tieneCuenta('paginas/Productos.html')" href="#">Productos</a></li>
+                <li><a href="paginas/Contacto.html">Contacto</a></li>
+                <li><a href="paginas/Ingresar.html">Ingresar</a></li>
+            </ul>
+            <a href="index.html"><img id="logo" src="img/LogoPrincipalMin.jpg" alt="Logo de todo un poco"></a>
+        </nav>
+        <h1>Bienvenido a De Todo Un Poco!</h1>
+        <div id="tela"></div>
+        <video src="video/presentacion.mp4" autoplay muted loop></video>
+    </header>
+    <div id="container">
+        <aside>
+            <ul>
+                <li><a href="#menu">Inicio</a></li>
+                <li><a href="#quines-somos">Nosotros</a></li>
+                <li><a href="#como-se-usa">Como usar la pagina</a></li>
+                <li><a href="#productos-destacados">Productos</a></li>
+            </ul>
+        </aside>
+        <div id="container__secciones">
+            <section id="quines-somos">
+                <h3>Quienes somos?</h3>
+                <hr>
+                <div id="quines-somos__content">
+                    <div id="quines-somos__img">
+                        <img src="img/imgTexto1.jpg" alt="Imagen de maquina de coser">
+                    </div>
+                    <div id="quines-somos__texto">
+                        <p>De todo un poco nace en 2022 con la idea de renovar el mercado y la forma de realizar trajes.
+                            La propuesta es la siguiente; que cada persona que desea realizar algun tipo de vestimenta no tenga la necesidad de salir de su casa y 
+                            pueda de una forma rapida y eficaz llevar a cabo la prenda deseada.
+                        </p><br><br>
+                        <p>Somos un grupo conformado de 10 modistas, los mejores en sus sectores, destinados a lograr el objetivo planteado y 
+                            llevando a cabo una nueva forma de vestirte.
+                        </p><br><br>
+                        <p>El objetivo? simple, poder llevar a cada parte del pais una casa de modistas, con los costos mas bajos del pais al 
+                            poder reducir costos al maximo. Ademas, va a ser intuitiva, facil de usar y sin costos ocultos, sera transparente sin ningun tipo de letra chica.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="como-se-usa">
+                <h3>Como se usa?</h3>
+                <hr>
+                <div id="como-se-usa__texto">
+                    <p>La pagina tiene multiples usos. Uno de los principales usos es llevar a cabo la realizacion de trajes/vestidos/vestimentas.
+                        Ademas, tambien podras comprar prendas que ya estan realizadas y cambiarle detalles. Por ultimo, tendra una seccion de "Diseños" el cual
+                        se podra ver estilos de la prenda deseada para tener referencias.
+                    </p>
+                    <p class="como-se-usa__titulo">En caso de hacer un encargo a medida sera a traves de pasos:</p>
+                        <ol>
+                            <li>Se le pedira que desea realizar traje/vestido/vestimenta</li>
+                            <li>Luego se le pediran las medidas necesarias segun lo ingresado anteriormente</li>
+                            <li>Tendra un apartado para explicar como desea que sea, podra subir fotos, elegir un diseño de la pagina, hacer comentarios.</li>
+                            <li>Aqui tendra que elgir el tipo de tela deseara usar, podra hacer combinacion de varias telas. Tambien podra agregar detalles (botones de metal o plastico) y en la vestimenta.</li>
+                            <li>En este paso se le pediran los datos de contacto (Telefono, Email, Whatsapp) y lugar de envio del pedido</li>
+                            <li>Se enviara el pedido al modista mas desocupado para que lo contacte y cotice el pedido.</li>
+                            <li>Una vez cotizado, se le generara un link</li>
+                            <li>Luego de abonar el pedido, se pondra en marcha y recibira notificaciones a medida que se vaya realizando el pedido</li>
+                        </ol>
+                    <p class="como-se-usa__titulo">Si desea comprar algo en 'Productos' debera:</p>
+                        <ol>
+                            <li>Buscar el producto deseado</li>
+                            <li>Agregarlo al carrito</li>
+                            <li>Si dese algun tipo de agregado, en la seccion de 'agregados' detallar que desea y el modista responsable respondera si se puede realizar o no lo agregado</li>
+                            <li>Una vez terminado se debera abonar el monto de la prenda, con sus adicionales en caso de que sea necesario</li>
+                            <li>Por ultimo, sera enviado a su domicilio</li>
+                        </ol>
+                </div>
+            </section>
+            <section id="productos-destacados">
+                <h3>Productos Destacados</h3>
+                <hr>
+                <div id="productos">
+                    <a href="paginas/Productos.html">
+                    <div class="productos__content">
+                        <div id="card__producto_1"></div>
+                        <div id="producto_imagen">
+                            <img src="img/productos_destacados/Producto1.jpeg" alt="Imagen Producto 1">
+                        </div>
+                        <div class="producto_informacion">
+                            <h4>Saco Robertiñio</h4>
+                            <p>Saco de gabardina fina, azul marino largo. Acompañado con un chaleco dorado y de ragalo el pañuelo del mismo color que el chaleco</p>
+                            <div class="producto_precio">
+                                <span>$70.000</span>$56.000
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="paginas/Productos.html">
+                    <div class="productos__content">
+                        <div id="card__producto_2"></div>
+                        <div class="producto_imagen">
+                            <img src="img/productos_destacados/Producto2.jpeg" alt="Imagen Producto 2">
+                        </div>
+                        <div class="producto_informacion">
+                            <h4>Vestido "princesita"</h4>
+                            <p>Vestido rosado, decorado con flores en su escote. Divino para un cumple de 15</p>
+                            <div class="producto_precio">
+                                <span>45.000</span>$25.000
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="paginas/Productos.html">
+                    <div class="productos__content">
+                        <div id="card__producto_3"></div>
+                        <div class="producto_imagen">
+                            <img src="img/productos_destacados/Producto3.jpeg" alt="Imagen Producto 3">
+                        </div>
+                        <div class="producto_informacion">
+                            <h4>Vestido Oro</h4>
+                            <p>Vestido inspirado en la era 1700 a. Oro de 18 kl y seda</p>
+                            <div class="producto_precio">
+                                <span>600.000</span>$350.000
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="paginas/Productos.html">
+                    <div class="productos__content">
+                        <div id="card__producto_4"></div>
+                        <div class="producto_imagen">
+                            <img src="img/productos_destacados/Producto4.jpeg" alt="Imagen Producto 4">
+                        </div>
+                        <div class="producto_informacion">
+                            <h4>Saco Capitan Azul</h4>
+                            <p>Saco meticulosamente diseñado para tirar facha por donde vayas</p>
+                            <div class="producto_precio">
+                                <span>400.000</span>$200.000
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div id="footer__email">
+                <div  id="footer__email__content">
+                    <span>Email:</span> 
+                    <p>info@detodounpoco.com</p>
+                </div>
+            </div>
+            <div id="footer__redes">
+                <div id="footer__redes__content">
+                    <ul id="redes-sociales">   
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="img/Facebook.png" alt="Logo Facebook">Facebook</a></li>     
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="img/Instagram.png" alt="Logo Instagram">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer__coopy">
+                <div id="footer__coopy__content">
+                    <span>&copy;De Todo Un Poco</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

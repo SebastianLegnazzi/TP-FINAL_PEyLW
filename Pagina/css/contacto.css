@@ -1,0 +1,116 @@
+@import url(../css/general.css);
+
+/* FORM */
+
+#formulario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+td {
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+h3 {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: rgb(224, 222, 222);
+}
+
+/* Input Text */
+
+input[type="text"], input[type="email"] {
+    width: 400px;
+    height: 25px;
+}
+
+.formulario-consulta {
+    color: black;
+    font-size: 15px;
+}
+
+/* Input Radio */
+
+.opciones-consulta {
+    display: flex;
+    flex-direction: column;
+}
+
+.opciones-consulta__input {
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: rgb(212, 107, 165);
+    background-color: rgba(53, 53, 53, 0.61);
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px 5px 25px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+label:hover {
+    background-color: rgba(212, 107, 165, 0.158);
+}
+
+label:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 3px solid rgba(212, 107, 165, 0.692);
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+input[type="radio"]:checked + label{
+    padding: 5px 15px;
+    color: white;
+    background-color: rgba(212, 107, 165, 0.692);
+    transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked + label:before{
+    display: none;
+}
+
+/* Botones */
+
+#input-botones {
+    display: flex;
+}
+
+input[type="reset"], input[type="button"]{
+    color: rgb(235, 122, 184);
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgba(39, 39, 39, 0.637);
+    border-radius: 5px;
+    background-color: rgba(212, 107, 165, 0.158);
+    transition: all 0.3s;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover{
+    background-color: rgba(226, 105, 172, 0.274);
+}
+
+#boton-reset {
+    width: 100%;
+}
+
+/* footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+}

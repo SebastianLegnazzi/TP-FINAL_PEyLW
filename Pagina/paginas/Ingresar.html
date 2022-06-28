@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ingresar</title>
+        <link rel="icon" href="../img/LogoPrincipalMin.jpg">
+        <link rel="stylesheet" href="../css/Ingresar.css">
+        <script src="../js/registrar.js"></script>
+        <script src="../js/ingresar.js"></script>
+        <script src="../js/FuncionesGenerales.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav id="menu">
+                <ul id="menu_items">
+                    <li><a href="../index.html"><img src="../img/home.png" alt=""></a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Ingresar</h1>
+        <hr>
+        <div id="formularios">
+            <div id="formulario-ingresar" class="formulario__content active" onkeypress="if(event.keyCode == 13){validarUsuario()}">
+                <div class="formulario">
+                    <input type="text" id="input-usuario-Ingresar" placeholder=" ">
+                    <label for="input-usuario-Ingresar" id="lbl__usuarios__usuario">Nombre</label>
+                </div>
+                <div class="formulario">
+                    <input type="password" id="input-contraseña-Ingresar" placeholder=" ">
+                    <label for="input-contraseña-Ingresar" id="lbl__contraseña__ing">Contraseña</label>
+                </div>
+                <div class="botones">
+                    <button type="button" name="ingresar" id="ingresar" onclick="validarUsuario()" >Ingresar</button>
+                    <a id="ir-registrar" onclick="navegar('formulario-ingresar','formulario-registrar')">No tengo cuenta</a>
+                </div>
+            </div>
+            <div id="formulario-registrar" class="formulario__content" onkeypress="if(event.keyCode == 13){datosObligatorios()}">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="formulario">
+                                <input type="text" id="input-usuario-resgistrar" placeholder=" ">
+                                <label for="input-usuario-resgistrar" id="lbl__usuario__registrar">Nombre y apellido*</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="formulario">
+                                <input type="text" id="input-inputEmail" placeholder=" ">
+                                <label for="input-inputEmail" id="lbl__email__registrar">Email *</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="formulario">
+                                <input type="password" id="input-contraseña-Registrar" placeholder=" ">
+                                <label for="input-contraseña-Registrar" id="lbl__contraseña__registrar">Contraseña *</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="formulario">
+                                <input type="password" id="input__confirmar-contraseña-Registrar" placeholder=" ">
+                                <label for="input__confirmar-contraseña-Registrar" id="lbl__confirmar-contraseña__ing">Confirmar Contraseña *</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="formulario">
+                                <input type="number" id="input__numero-Registrar" placeholder=" ">
+                                <label for="input__numero-Registrar" id="lbl__numero__ing">Numero de Telefono</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="formulario">
+                                <input type="date" id="input__fecha-Registrar" min="1930-12-31">
+                                <label for="input__fecha-Registrar" id="lbl__fecha__ing">Fecha de Nacimiento *</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                    <div class="botones">
+                        <button type="button" name="registrarse" id="registrarse" onclick="datosObligatorios()">Registrarse</button>
+                        <a href="" id="ir-ingresar" onclick="navegar('formulario-registrar','formulario-ingresar')">Ya tengo cuenta</a>
+                    </div>
+            </div>
+        </div>
+        <footer>
+            <div id="footer__email">
+                <div  id="footer__email__content">
+                    <span>Email:</span> 
+                    <p>info@detodounpoco.com</p>
+                </div>
+            </div>
+            <div id="footer__redes">
+                <div id="footer__redes__content">
+                    <ul id="redes-sociales">   
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="../img/Facebook.png" alt="Logo Facebook">Facebook</a></li>     
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="../img/Instagram.png" alt="Logo Instagram">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer__coopy">
+                <div id="footer__coopy__content">
+                    <span>&copy;De Todo Un Poco</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+@import url(../css/general.css);
+
+/* SECTION */
+
+hr {
+    width: 90%;
+}
+
+.modista__container {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    margin: 20px 0;
+}
+
+.modista__container__foto {
+    width: 800px;
+    height: 450px;
+    margin: 0 20px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 1px 3px 15px #111;
+    transition: all 0.3s;
+
+}
+
+.modista__container__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.modista__container__foto img:hover{
+    transform: scale(1.1);
+}
+
+.modista__container__foto:hover {
+    transform: translateY(-20px);
+    box-shadow: 5px 10px 20px #111;
+}
+
+.modista__container__info {
+    margin: 30px 70px 0 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}

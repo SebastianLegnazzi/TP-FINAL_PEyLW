@@ -1,0 +1,96 @@
+@import url(../css/general.css);
+
+/* GENERAL */
+
+#formularios {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.formulario {
+    width: 100%;
+    height: 100px;
+    margin: 0 20px;
+    position: relative;
+}
+
+#formularios input {
+    color: white;
+    font-size: 18px;
+    width: 350px;
+    height: 35px;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgba(255, 139, 211, 0.616);
+
+}
+
+#formularios label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#formularios input:focus + label,
+#formularios input:not(:placeholder-shown) + label{
+    transform: translateY(-20%);
+    color: rgba(0, 217, 255, 0.986);
+    font-size: 14px
+}
+
+/* FORMULARIO INGRESAR */
+
+#formulario-ingresar{
+}
+
+/* FORMULARIO REGISTRAR */
+
+#formulario-registrar {
+}
+
+/* FORMULARIO VISIBLE */
+
+.formulario__content{
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* BOTONES */
+
+#formularios button{
+    margin-right: 30px;
+}
+
+/* Animacion */
+
+
+
+/* Validacion */
+
+.obligatorio {
+    background-color: #ff14142c !important;
+    transition: all 0.3s ease;
+}
+
+.correcto {
+    background-color: rgba(153, 254, 144, 0.159) !important;
+    transition: all 0.3s ease;
+}
+
+/* FOOTER */
+
+footer{
+    position: fixed;
+    bottom: 0;
+}

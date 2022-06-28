@@ -1,0 +1,310 @@
+@import url(../css/general.css);
+
+/* GENERALES */
+
+*{
+    color: rgb(229, 229, 229);
+}
+
+td{
+    padding: 5px 10px;
+}
+#step-content p{
+    margin: 5px 0;
+    font-weight: bolder;
+    font-size: 18px;
+}
+#step-content span, #step-enviar h4 {
+    margin: 5px 0;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 18px;
+    color: rgb(224, 148, 199)
+}
+
+#step-traje-2__recordatorio{
+    color: rgb(251, 109, 109);
+    margin: 15px 0;
+}
+
+#step-traje-2__recordatorio > a{
+    color:#ff4848 ;
+}
+
+#step-traje-2__recordatorio > a:hover{
+    color: rgb(255, 78, 211);
+}
+
+/* Estilo todos los Step */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+     
+.step {
+    display: none;
+    background-color: rgb(139, 59, 103);
+    padding: 10px;
+    box-shadow: 0 0 10px #111;
+    border: 4px solid rgb(192, 30, 125);
+}
+
+.step.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.step__titulo {
+    background-color: rgb(68, 68, 68);
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 3px #111;
+}
+
+/* Input Texto */
+
+input[type="text"],[type="number"],[type="email"]{
+    width: 230px;
+    height: 35px;
+    color: black;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 1px 5px #111;
+}
+
+/* Input incorrecto */
+
+.inputInvalido {
+    border: 2px solid red;
+}
+
+/* Textarea */
+
+textarea{
+    color: #111;
+    font-size: 16px;
+}
+
+/* step-1 */
+
+#datos__personales {
+    margin: 10px 0;
+}
+
+td p {
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+}
+
+/* step-2 */
+
+#content__datos {
+    display:flex;
+}
+
+#content__color{
+    margin-right: 30px;
+}
+
+#content__referencia {
+    width: 500px;
+}
+
+
+/* Medidas Traje */
+
+.input-medidas {
+    display: flex;
+}
+
+.input-medidas > div {
+    margin: 0 10px;
+}
+
+.content__imagen-pedidos {
+    text-align: center;
+}
+
+/* Input Radio */
+
+input[type="radio"],[type="checkbox"] {
+    display: none;
+}
+
+.label__radio {
+    color: rgb(212, 107, 165);
+    background-color: rgba(53, 53, 53, 0.61);
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px 5px 25px;
+    border-radius: 3px;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.label__radio:hover {
+    background-color: rgba(212, 107, 165, 0.158);
+}
+
+.label__radio:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 3px solid rgba(212, 107, 165, 0.692);
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+input[type="radio"]:checked + label{
+    padding: 5px 15px;
+    color: white;
+    background-color: rgba(212, 107, 165, 0.692);
+    transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked + label:before{
+    display: none;
+}
+
+/* Input checkbox */
+
+[type="checkbox"] {
+    display: none;
+}
+
+.label__checkbox {
+    color: rgb(212, 107, 165);
+    background-color: rgba(53, 53, 53, 0.61);
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px 5px 25px;
+    border-radius: 3px;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.label__checkbox:hover {
+    background-color: rgba(212, 107, 165, 0.158);
+}
+
+.label__checkbox:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 3px solid rgba(212, 107, 165, 0.692);
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+input[type="checkbox"]:checked + label{
+    padding: 5px 15px;
+    color: white;
+    background-color: rgba(212, 107, 165, 0.692);
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked + label:before{
+    display: none;
+}
+
+/* LISTAS DESPLEGABLES */
+
+select, option {
+    color: #111;
+    padding: 5px;
+    font-size: 15px;
+}
+
+/* Pedidos */
+
+.imagen-pedidos{
+    width: 350px;
+    height: 300px;
+}
+
+/* Enviar */
+
+#enviar__medidas{
+    display: flex;
+}
+
+#mostrar__color{
+    padding: 20px;
+}
+
+#enviar__medidas div{
+    margin: 0 30px 10px 0;
+}
+
+#enviar__salida p {
+    text-decoration: none;
+}
+
+/* step Zapato */
+
+.content__tarjetas{
+    display: flex;
+}
+
+.tarjeta-zapato {
+    flex-direction: column;
+    background-color: rgba(82, 82, 82, 0.679);
+    padding: 10px;
+    margin: 20px 10px;
+    box-shadow: 0 2px 7px #111;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-zapato:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 3px 10px #111;
+}
+
+.tarjeta__zapato-info img{
+    width: 250px;
+    height: 250px;
+}
+
+.tarjeta__zapato-info p{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.selected{
+    transform: scale(1.1);
+    margin: 20px 30px;
+    box-shadow: 0px 0px 15px rgb(86, 241, 255);
+    border-bottom: 3px solid rgb(1, 179, 1);
+}
+
+/* Boton */
+
+button {
+    margin: 5px;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+}

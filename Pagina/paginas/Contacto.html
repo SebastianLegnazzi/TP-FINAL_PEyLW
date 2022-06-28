@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link rel="icon" href="../img/LogoPrincipalMin.jpg">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <script src="../js/contacto.js"></script>
+    <script src="../js/FuncionesGenerales.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <a href="../index.html"><img src="../img/home.png" alt=""></a>
+        </nav>
+        <h1>Contacto</h1>
+        <hr>
+    </header>
+    <section>
+        <div id="formulario">
+            <form method="get">
+                <table>
+                    <tr>
+                        <td>
+                            <h3>Ingrese su Nombre:</h3><br>
+                            <input class="formulario-consulta" type="text" name="nombre" maxlength="15">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Ingrese su Email:</h3><br>
+                            <input class="formulario-consulta" type="email" name="email" maxlength="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="opciones-consulta">
+                            <h3>Ingrese el tipo de consulta:</h3>
+                            <div class="opciones-consulta__input">
+                                <input type="radio" name="TipoConsulta" id="reclamo" value="1"> 
+                                <label for="reclamo"> Reclamo </label>
+                            </div>
+                            <div class="opciones-consulta__input">
+                                <input type="radio" name="TipoConsulta" id="duda" value="2">
+                                <label for="duda">Duda</label> 
+                            </div>
+                            <div class="opciones-consulta__input">
+                                <input type="radio" name="TipoConsulta" id="sugerencia" value="3"> 
+                                <label for="sugerencia">Sugerencia</label>
+                            </div>
+                            <div class="opciones-consulta__input">
+                                <input type="radio" name="TipoConsulta" id="general" value="4"> 
+                                <label for="general">General</label> 
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Ingrese su Consulta:</h3><br>
+                            <textarea class="formulario-consulta" name="comentario" maxlength="500" cols="100" rows="20"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="input-botones">
+                            <div id="boton-reset"><input type="reset" value="Restablecer"></div>
+                            <div id="boton-enviar"><input type="button" onclick="enviarMensaje()" value="Enviar Mensaje"></div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div id="footer__email">
+            <div  id="footer__email__content">
+                <span>Email:</span> 
+                <p>info@detodounpoco.com</p>
+            </div>
+        </div>
+        <div id="footer__redes">
+            <div id="footer__redes__content">
+                <ul id="redes-sociales">   
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="../img/Facebook.png" alt="Logo Facebook">Facebook</a></li>     
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="../img/Instagram.png" alt="Logo Instagram">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer__coopy">
+            <div id="footer__coopy__content">
+                <span>&copy;De Todo Un Poco</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

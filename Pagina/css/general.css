@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap');
+
+/* GENERAL */
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: rgb(70, 70, 70);
+}
+
+hr {
+    width: 50%;
+    height: 2px;
+    background-color: rgb(148, 75, 115);
+    border: none;
+    margin: 25px auto;
+}
+
+h1 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(148, 75, 115);
+    transition: 0.3s;
+}
+
+/* NAV */
+
+nav {
+    position: absolute;
+    margin: 10px;
+}
+
+nav img {
+    width: 40px;
+    height: 37px;
+}
+
+
+/* Botones */
+
+button{
+    color: rgb(216, 205, 211);
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgba(39, 39, 39, 0.637);
+    border-radius: 5px;
+    background-color: rgba(212, 107, 165, 0.699);
+    transition: all 0.3s;
+}
+
+button:hover{
+    background-color: rgba(226, 105, 172, 0.274);
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    background-color: rgb(53, 53, 53);;
+}
+
+#footer__email span {
+    margin: 10px 0;
+    font-size: 18px;
+    color: rgb(255, 129, 249);
+}
+
+footer ul {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+#footer__email {
+    width: 30%;
+    height: 100%;
+    align-self: center;
+}
+
+#footer__redes {
+    width: 30%;
+    height: 100%;
+}
+
+#footer__coopy {
+    width: 30%;
+    height: 100%;
+}
+
+#footer__coopy__content > span {
+    margin-right: 20px;
+    color: rgb(139, 139, 139);
+}
+
+#footer__email__content,
+#footer__redes__content,
+#footer__coopy__content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#footer__email__content,
+#footer__redes__content{
+    justify-content: center;
+}
+
+#footer__coopy__content{
+    justify-content: center;
+    align-items: center;
+}

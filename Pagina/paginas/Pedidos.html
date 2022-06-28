@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pedidos</title>
+        <link rel="icon" href="../img/LogoPrincipalMin.jpg">
+        <link rel="stylesheet" href="../css/pedidos.css">
+        <script src="../js/pedidos.js"></script>
+        <script src="../js/FuncionesGenerales.js"></script>
+        <script src="../js/pedidos_vestido.js"></script>
+        <script src="../js/pedidos_traje.js"></script>
+        <script src="../js/pedidos_zapatos.js"></script>
+    </head>
+    <body onload="cargarUsuario()">
+        <header>
+            <nav id="menu">
+                <ul id="menu_items">
+                    <li><a href="../index.html"><img src="../img/home.png" alt=""></a></li>
+                </ul>
+            </nav>
+            <h1>Pedidos</h1>
+            <hr>
+        </header>
+        <section id="step-content">
+            <div class="step active" id="step-1">
+                <div class="step__titulo">
+                    <h2>Ingrese sus datos y lo que desea encargar</h2>
+                </div>
+                <div class="step__content">
+                    <table id="datos__personales">
+                        <tr>
+                            <td colspan="2">
+                                <p id="nombre">Nombre <span id="nombre-suario"></span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p id="telefono">Telefono <span id="telefono-suario"></span></p>
+                            </td>
+                            <td>
+                                <p id="email">Email <span id="email-usuario"></span></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <h3 id="titulo-tipo-pedidos">Ingrese el tipo de pedido que desea realizar:</h3>
+                    <div class="opciones-pedidos__input">
+                        <input type="radio" name="TipoPedido" id="traje" value="traje"> 
+                        <label class="label__radio" for="traje"> Traje </label>
+                    </div>
+                    <div class="opciones-pedidos__input">
+                        <input type="radio" name="TipoPedido" id="vestido" value="vestido">
+                        <label class="label__radio" for="vestido">Vestido</label> 
+                    </div>
+                    <div class="opciones-pedidos__input">
+                        <input type="radio" name="TipoPedido" id="zapatos" value="zapato"> 
+                        <label class="label__radio" for="zapatos">Zapatos</label> 
+                    </div>
+                </div>
+                <div class="step__button">
+                    <button type="button" class="step__button__siguiente" onclick="inicioPrograma()">Siguiente</button>
+                </div>
+            </div>
+            <div id="content__traje">
+                <div class="step" id="step-traje">
+                    <div class="step__titulo">
+                        <h2>Eleccion de Prendas</h2>
+                    </div>
+                    <div class="step__content">
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoTraje" id="saco" value="saco"> 
+                            <label class="label__radio" for="saco">Saco</label>
+                        </div>
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoTraje" id="chaleco" value="chaleco">
+                            <label class="label__radio" for="chaleco">Chaleco</label> 
+                        </div>
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoTraje" id="pantalon" value="pantalon"> 
+                            <label class="label__radio" for="pantalon">Pantalon</label>
+                        </div>
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoTraje" id="camisa" value="camisa"> 
+                            <label class="label__radio" for="camisa">Camisa</label> 
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-traje','step-1')" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="funcionTraje()">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-traje-1">
+                    <div id="step-medidas-saco">
+                        <div class="step__titulo">
+                            <h2>Ingrese las siguientes medidas del saco:</h2>
+                        </div>
+                        <div class="content__imagen-pedidos">
+                            <img class="imagen-pedidos" src="../img/medidas/medidas-saco.jpg" alt="Foto indicativa de como realizar medidas">
+                        </div>
+                        <div class="input-medidas">
+                            <div>
+                                <p>Medida Hombros (cm):</p>
+                                <input name="medidaSaco" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Mangas (cm):</p>
+                                <input name="medidaSaco" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Pecho (cm):</p>
+                                <input name="medidaSaco" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Abdomen (cm):</p>
+                                <input name="medidaSaco" class="medidas-traje" type="number">
+                            </div>
+                            <div>
+                                <p>Medida Largo (cm):</p>
+                                <input name="medidaSaco" class="medidas-traje" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-traje-1','step-traje'); arrayEleccionTraje = []" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="sumarPrendaTraje(document.getElementsByName('medidaSaco'),1)" >Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-traje-2">
+                    <div id="medidas-chaleco">
+                        <div class="step__titulo">
+                            <h2>Ingrese las siguientes medidas del chaleco:</h2>
+                        </div>
+                        <div class="content__imagen-pedidos">
+                            <img class="imagen-pedidos" src="../img/medidas/medidas-chaleco.png" alt="Foto indicativa de como realizar medidas">
+                        </div>
+                        <div class="input-medidas">
+                            <div>
+                                <p>Medida Largo (cm):</p>
+                                <input name="medidaChaleco" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Pecho (cm):</p>
+                                <input name="medidaChaleco" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Cintura (cm):</p>
+                                <input name="medidaChaleco" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Cadera (cm):</p>
+                                <input name="medidaChaleco" class="medidas-traje" type="number" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-traje-2','step-traje'); arrayEleccionTraje = []" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="sumarPrendaTraje(document.getElementsByName('medidaChaleco'),2)" >Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-traje-3">
+                    <div id="medidas-pantalon">
+                        <div class="step__titulo">
+                            <h2>Ingrese las siguientes medidas del pantalon:</h2>
+                        </div>
+                        <div class="content__imagen-pedidos">
+                            <img class="imagen-pedidos" src="../img/medidas/medidas-pantalon.png" alt="Foto indicativa de como realizar medidas">
+                        </div>
+                        <div class="input-medidas">
+                            <div>
+                            <p>Medida Cadera (cm):</p>
+                                <input name="medidaPantalon" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Tiro DEL (cm):</p>
+                                <input name="medidaPantalon" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Cintura (cm):</p>
+                                <input name="medidaPantalon" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Largo (cm):</p>
+                                <input name="medidaPantalon" class="medidas-traje" type="number" >
+                            </div>
+                            <div>
+                                <p>Medida Muslo (cm):</p>
+                                <input name="medidaPantalon" class="medidas-traje" type="number" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-traje-3','step-traje'); arrayEleccionTraje = []" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="sumarPrendaTraje(document.getElementsByName('medidaPantalon'),3)" >Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-traje-4">
+                    <div id="medidas-camisa">
+                        <div class="step__titulo">
+                            <h2>Ingrese las siguientes medidas de la camisa:</h2>
+                        </div>
+                        <div class="content__imagen-pedidos">
+                            <img class="imagen-pedidos" src="../img/medidas/medidas-camisa.jpg" alt="Foto indicativa de como realizar medidas">
+                        </div>
+                        <div class="input-medidas">
+                            <div>
+                                <p>Medida Hombro (cm):</p>
+                                <input name="medidaCamisa" type="number" class="medidas-traje" >
+                            </div>
+                            <div>
+                                <p>Medida Sisa (cm):</p>
+                                <input name="medidaCamisa" type="number" class="medidas-traje" >
+                            </div>
+                            <div>
+                                <p>Medida Largo (cm):</p>
+                                <input name="medidaCamisa" type="number" class="medidas-traje" >
+                            </div>
+                            <div>
+                                <p>Medida Manga (cm):</p>
+                                <input name="medidaCamisa" type="number" class="medidas-traje" >
+                            </div>
+                            <div>
+                                <p>Medida Cuello (cm):</p>
+                                <input name="medidaCamisa" type="number" class="medidas-traje" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-traje-4','step-traje'); arrayEleccionTraje = []" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="sumarPrendaTraje(document.getElementsByName('medidaCamisa'),4)" >Siguiente</button>
+                    </div>
+                </div>
+            </div>
+            <div id="content__vestido">
+                <div class="step" id="step-vestido">
+                    <div class="step__titulo">
+                        <h2>Tipo de vestido</h2>
+                    </div>
+                    <div class="step__content">
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoVestido" id="novia" value="Vestido de novia"> 
+                            <label class="label__radio" for="novia">Vestido de novia</label>
+                        </div>
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoVestido" id="cumpleaños15" value="Vestido de 15">
+                            <label class="label__radio" for="cumpleaños15">Vestido de 15</label> 
+                        </div>
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoVestido" id="fiesta" value="Vestido de Fiesta"> 
+                            <label class="label__radio" for="fiesta">Vestido de Fiesta</label>
+                        </div>
+                        <div class="opciones-pedidos__input">
+                            <input type="radio" name="TipoVestido" id="gala" value="Vestido de Gala"> 
+                            <label class="label__radio" for="gala">Vestido de Gala</label> 
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-vestido','step-1')" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="funcionVestido()">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-vestido-1">
+                    <div id="step-medidas__vestido">
+                        <div class="step__titulo">
+                            <h2>Ingrese las siguientes medidas para el vestido:</h2>
+                        </div>
+                        <div class="content__imagen-pedidos">
+                            <img class="imagen-pedidos" src="../img/medidas/medidas-vestido.png" alt="Foto indicativa de como realizar medidas">
+                        </div>
+                        <div class="input-medidas">
+                            <div>
+                                <p>Medida Pecho (cm):</p>
+                                <input name="medidasVestido" class="medidas-vestido" type="number">
+                            </div>
+                            <div>
+                                <p>Medida Cintura (cm):</p>
+                                <input name="medidasVestido" class="medidas-vestido" type="number">
+                            </div>
+                            <div>
+                                <p>Medida Cadera (cm):</p>
+                                <input name="medidasVestido" class="medidas-vestido" type="number">
+                            </div>
+                            <div>
+                                <p>Medida Largo (cm):</p>
+                                <input name="medidasVestido" class="medidas-vestido" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-vestido-1','step-vestido'); arrayEleccionTraje = []" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="verificarDatosVestido()" >Siguiente</button>
+                    </div>
+                </div>
+            </div>
+            <div id="content__zapato">
+                <div class="step" id="step-zapato">
+                    <div class="step__titulo">
+                        <h2>Elija el genero del tipo de zapato</h2>
+                    </div>
+                    <div class="step__content">
+                        <div class="opciones-pedidos__accesprop">
+                            <div class="zapato-genero">
+                                <input type="radio" name="generoZapato" id="hombre-zapatos" value="hombre"> 
+                                <label class="label__radio" for="hombre-zapatos">Hombre</label> 
+                            </div>
+                            <div class="zapato-genero">
+                                <input type="radio" name="generoZapato" id="mujer-zapatos" value="mujer"> 
+                                <label class="label__radio" for="mujer-zapatos">Mujer</label> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-zapato','step-1')" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="funcionZapato()">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-zapato-referencia">
+                    <div class="step__titulo">
+                        <h2>Elija el diseño preferido para el zapato</h2>
+                    </div>
+                    <div class="step__content" id="content_zapatos">
+                        
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-zapato-referencia','step-zapato')" class="step__button__volver">Volver</button>
+                        <button type="button" onclick="navegar('step-zapato-referencia','step-zapato-medidas')" class="step__button__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-zapato-medidas">
+                    <div id="step-medidas__zapato">
+                        <div class="step__titulo">
+                            <h2>Ingrese las siguientes medidas para el zapato:</h2>
+                        </div>
+                        <div class="content__imagen-pedidos">
+                            <img class="imagen-pedidos" src="../img/step-zapatos/guiaTallas.jpg" alt="Foto indicativa de como realizar medidas">
+                        </div>
+                        <div class="input-medidas">
+                            <div>
+                                <p>Medida Largo (cm):</p>
+                                <input name="medidaZapato" class="medidas-zapato" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-zapato-medidas','step-zapato-referencia'); arrayEleccionTraje = []" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__siguiente" onclick="verificarDatosZapato()" >Siguiente</button>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="step-2">
+                <div class="step__titulo">
+                    <h2>Diseño del vestido</h2>
+                </div>
+                <div class="step__content">
+                    <div id="content__datos">
+                        <div id="content__color">
+                            <p>Ingrese el color del <span class="tipo-prenda-seleccionado"></span></p>
+                            <input type="color" id="input__color">
+                        </div>
+                        <div id="content__referencia">
+                            <p>Ingrese una referencia a el <span class="tipo-prenda-seleccionado"></span></p>
+                            <input type="file" id="input__referencia">
+                            <p id="step-traje-2__recordatorio">recorda que podes buscar en nuestra pagina diseños y subir la foto que mas te guste! hace <a href="../paginas/diseño.html">click aqui</a></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="content__tipo-tela">
+                        <p>Que tipo/tipos de tela deseas?  para el <span class="tipo-prenda-seleccionado"></span> (Seda, Algodon, Poliester, etc.)</p>
+                        <input type="text" id="input__tipo-tela" placeholder="Seda, Algodon y Lycra">
+                    </div>
+                    <hr>
+                    <div id="content__comentario">
+                        <p>Comentanos como queres el <span class="tipo-prenda-seleccionado"></span> (detalles, formas, etc.)</p>
+                        <textarea id="comentario__prenda" cols="100" rows="5"></textarea>
+                    </div>
+                    <hr>
+                </div>
+                <div class="step__button">
+                    <button type="button" class="step__button__volver" onclick="navegar('step-2','step-'+seleccion)">Volver</button>
+                    <button type="button" class="step__button__siguiente" onclick="guardarDatosPedido(); enviarPedido()">Previsualizar encargo</button>
+                </div>
+            </div>
+            <div class="step" id="step-enviar">
+                <div class="step__titulo">
+                    <h2>Informacion de su pedido</h2>
+                </div>
+                <div class="step__content">
+                    <div id="enviar__salida">
+                        <div id="seleccion">
+
+                        </div>
+                        <div id="enviar__medidas">
+                            
+                        </div>
+                        <div id="datos__adicionales">
+
+                        </div>
+                    </div>
+                    <h4>Si los datos son los correctos envie el pedido</h4>
+                    <div class="step__button">
+                        <button type="button" onclick="navegar('step-enviar','step-2'), clearEnviar()" class="step__button__volver">Volver</button>
+                        <button type="button" class="step__button__submit" onclick="alert('Su pedido fue enviado exitosamente! En breves se contactara el modista por email'); window.location.assign('../index.html')">Enviar pedido</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="footer__email">
+                <div  id="footer__email__content">
+                    <span>Email:</span> 
+                    <p>info@detodounpoco.com</p>
+                </div>
+            </div>
+            <div id="footer__redes">
+                <div id="footer__redes__content">
+                    <ul id="redes-sociales">   
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="../img/Facebook.png" alt="Logo Facebook">Facebook</a></li>     
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="../img/Instagram.png" alt="Logo Instagram">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer__coopy">
+                <div id="footer__coopy__content">
+                    <span>&copy;De Todo Un Poco</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
