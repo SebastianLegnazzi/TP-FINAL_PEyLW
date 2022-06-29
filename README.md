@@ -5,6 +5,6 @@
 - **CUATRIMESTRE:** 2º
 - **CARRERA:** Tecnicatura Universitaria en Desarrollo Web
 - **MATERIA:** Programacion Estática y Laboratorio Web
-- **NOTA:** en proceso :arrows_counterclockwise:
+- **NOTA:** :arrows_counterclockwise:en proceso 
 ## Contacto
 - **EMAIL:** sebileg@hotmail.com
