@@ -1,7 +1,7 @@
 # Trabajo Final
 ## Datos del Proyecto
 - **DESCRIPCION:** Realizar una pagina web, con algun tema de nuestro interés, con lo enseñado en la materia (HTML, CSS, JavaScript) sin ningun Framework y tampoco Responsive.
-- **REQUERIMENTOS:** [PDF Requerimentos](https://drive.google.com/file/d/1RFoWKfC0ZmlY31qZiCirLzUDf5R6UjKW/view?usp=sharing)
+- **REQUERIMIENTOS:** [PDF Requerimentos](https://drive.google.com/file/d/1RFoWKfC0ZmlY31qZiCirLzUDf5R6UjKW/view?usp=sharing)
 - **PAGINA WEB:** [De Todo Un Poco](https://sebastianlegnazzi.github.io/TP-FINAL_PEyLW/Pagina/)
 - **PROFESORES:** Daniel Dolz, Mauro Sagripanti
 - **NOTA:** :arrows_counterclockwise: en proceso :arrows_counterclockwise:
