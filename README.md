@@ -4,7 +4,7 @@
 - **REQUERIMIENTOS:** [PDF Requerimientos](https://drive.google.com/file/d/1RFoWKfC0ZmlY31qZiCirLzUDf5R6UjKW/view?usp=sharing)
 - **PAGINA WEB:** [De Todo Un Poco](https://sebastianlegnazzi.github.io/TP-FINAL_PEyLW/Pagina/)
 - **PROFESORES:** Daniel Dolz, Mauro Sagripanti
-- **NOTA:** :arrows_counterclockwise: en proceso :arrows_counterclockwise:
+- **NOTA:** :white_check_mark: 10 :white_check_mark:
 ## Datos Institucionales
 - **NOMBRE Y APELLIDO:** Sebastian Legnazzi 
 - **LEGAJO:** FAI-3152
